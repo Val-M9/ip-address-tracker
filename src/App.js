@@ -18,8 +18,6 @@ const App = () => {
       setInfo(result.data)
     })();
   }, [ip]);
-
-  console.log("info", info);
   
   if(!info) {
     return <Loader />

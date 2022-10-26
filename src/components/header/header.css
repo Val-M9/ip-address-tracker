@@ -1,0 +1,15 @@
+.header {
+  background-image: url(../../common/images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 325px;
+}
+
+.heading {
+  text-align: center;
+  color: #fff;
+  padding-top: 25px;
+  font-weight: 500;
+  font-size: 26px;
+}

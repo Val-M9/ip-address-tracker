@@ -1,0 +1,61 @@
+/* TODO - refactor to max-width */
+.location-info {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translate(-50%);
+  height: 300px;
+  height:min-content;
+  background-color: #fff;
+  min-width: 240px;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  width: 85%;
+  padding: 0px 20px 20px 20px;
+  z-index: 2;
+}
+
+.info__heading {
+  font-weight: var(--normal);
+  color: var(--light-gray);
+  padding-top: 20px;
+  font-size: 12px;
+}
+
+.info__descr {
+  font-weight: var(--normal);
+  font-size: 20px;
+}
+
+@media (min-width: 1024px) {
+  .location-info {
+    box-sizing: content-box;
+    top: 260px;
+    width: 70%;
+    min-height: 130px;
+    padding-top: 10px;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .info__block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: start;
+    height: 90px;
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+  .info__block:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 100%;
+    border-left: 1px solid var(--light-gray);
+  }
+}

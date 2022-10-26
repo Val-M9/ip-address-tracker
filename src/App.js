@@ -1,11 +1,8 @@
-import { useCallback, useEffect } from 'react';
-import { InfoCard } from './components/info-card/InfoCard';
-import { Header } from './components/header/Header';
-import Map from './components/map/Map';
+import { useCallback, useEffect, useState } from 'react';
+import { apiCall } from './services/api-call';
+import { InfoCard, Header, Map, Loader } from './components/components';
 import './reset.css';
 import './App.css';
-import { useState } from 'react';
-import { apiCall } from './services/api-call';
 
 const App = () => {
   const [ip, setIp] = useState();
@@ -25,7 +22,7 @@ const App = () => {
   console.log("info", info);
   
   if(!info) {
-    return <div>Loading...</div>
+    return <Loader />
   }
 
   return (

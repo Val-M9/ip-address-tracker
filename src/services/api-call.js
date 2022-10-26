@@ -5,7 +5,6 @@ const apiCall = {
   async getIpAddress(ipAddress) {
     try {
       const clientIp = await this.getClientIp();
-      console.log(clientIp);
       const response = await axios.get(`${BASE_URL}&ipAddress=${ipAddress || clientIp}`);
       return response;
     } catch (error) {
